@@ -40,12 +40,12 @@ WORKDIR /RoseTTAFold
 
 # create conda environment for RoseTTAFold
 #   If your NVIDIA driver compatible with cuda11
-# COPY RoseTTAFold-linux.yml /
+COPY RoseTTAFold-linux.yml /
 RUN conda env create -f RoseTTAFold-linux.yml
 
 
 # create conda environment for pyRosetta folding & running DeepAccNet
-# COPY folding-linux.yml /
+COPY folding-linux.yml /
 RUN conda env create -f folding-linux.yml
 
 # Download network weights (under Rosetta-DL Software license -- please see below)
