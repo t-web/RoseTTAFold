@@ -36,25 +36,25 @@ RUN conda update -qy conda &&\
     cudatoolkit==${CUDA}.3
 
 
-#WORKDIR /RoseTTAFold
+WORKDIR /RoseTTAFold
 
 # create conda environment for RoseTTAFold
-#   If your NVIDIA driver compatible with cuda11
-COPY RoseTTAFold-linux.yml /
-RUN conda env create -f RoseTTAFold-linux.yml
+# If your NVIDIA driver compatible with cuda11
+#COPY RoseTTAFold-linux.yml /
+RUN conda env create -f /RoseTTAFold/RoseTTAFold-linux.yml
 
 
 # create conda environment for pyRosetta folding & running DeepAccNet
-COPY folding-linux.yml /
-RUN conda env create -f folding-linux.yml
+#COPY folding-linux.yml /
+RUN conda env create -f /RoseTTAFold/folding-linux.yml
 
 # Download network weights (under Rosetta-DL Software license -- please see below)
-RUN wget -q https://files.ipd.uw.edu/pub/RoseTTAFold/weights.tar.gz &&\
-    tar xfz weights.tar.gz
+RUN wget -q -P /RoseTTAFold https://files.ipd.uw.edu/pub/RoseTTAFold/weights.tar.gz &&\
+    tar xfz /RoseTTAFold/weights.tar.gz
 
 # Download and install third-party software if you want to run the entire modeling script (run_pyrosetta_ver.sh)
-COPY install_dependencies.sh /
-RUN /install_dependencies.sh
+#COPY install_dependencies.sh /
+RUN /RoseTTAFold/install_dependencies.sh
 
 
 # ENTRYPOINT [" "]
