@@ -49,7 +49,7 @@ COPY folding-linux.yml /
 RUN conda env create -f folding-linux.yml
 
 # Download network weights (under Rosetta-DL Software license -- please see below)
-RUN wget https://files.ipd.uw.edu/pub/RoseTTAFold/weights.tar.gz &&\
+RUN wget -c -q https://files.ipd.uw.edu/pub/RoseTTAFold/weights.tar.gz &&\
     tar xfz weights.tar.gz
 
 # Download and install third-party software if you want to run the entire modeling script (run_pyrosetta_ver.sh)
