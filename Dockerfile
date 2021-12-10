@@ -1,6 +1,6 @@
 # docker of RoseTTAFold
 
-ARG CUDA=11.0
+ARG CUDA=10.1
 FROM nvidia/cuda:${CUDA}-base
 # FROM directive resets ARGS, so we specify again (the value is retained if
 # previously set).
