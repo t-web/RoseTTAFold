@@ -1,40 +1,44 @@
 name: RoseTTAFold
 channels:
-  - rusty1s
+  - pyg
+  - biocore
   - pytorch
-  - nvidia
+  - bioconda
   - conda-forge
   - defaults
-  - bioconda
-  - biocore
 dependencies:
   - _libgcc_mutex=0.1=main
   - _openmp_mutex=4.5=1_gnu
   - biopython=1.78=py38h497a2fe_2
   - blas=1.0=mkl
-  - hhsuite
   - blast-legacy=2.2.26=2
   - brotlipy=0.7.0=py38h497a2fe_1001
   - bzip2=1.0.8=h7b6447c_0
-  - ca-certificates=2021.7.5=h06a4308_1
-  - certifi=2021.5.30=py38h06a4308_0
+  - ca-certificates=2021.10.8=ha878542_0
+  - certifi=2021.10.8=py38h578d9bd_1
   - cffi=1.14.5=py38ha65f79e_0
   - chardet=4.0.0=py38h578d9bd_1
   - cryptography=3.4.7=py38ha5dfef3_0
-  - cudatoolkit=10.2.89=h8f6ccaa_8
+  - cudatoolkit=10.1.243=h036e899_8
   - ffmpeg=4.3=hf484d3e_0
   - freetype=2.10.4=h5ab3b9f_0
   - gmp=6.2.1=h2531618_2
   - gnutls=3.6.15=he1e5248_0
   - googledrivedownloader=0.4=pyhd3deb0d_1
+  - hhsuite=3.3.0=py38pl5262hc37a69a_2
+  - html5lib=1.1=pyh9f0ad1d_0
   - idna=2.10=pyh9f0ad1d_0
   - intel-openmp=2021.2.0=h06a4308_610
+  - isodate=0.6.0=py_1
   - jinja2=3.0.1=pyhd8ed1ab_0
   - joblib=1.0.1=pyhd8ed1ab_0
   - jpeg=9b=h024ee3a_2
+  - keepalive=0.5=pyhd8ed1ab_6
   - lame=3.100=h7b6447c_0
   - lcms2=2.12=h3be6417_0
   - ld_impl_linux-64=2.35.1=h7274673_9
+  - libblas=3.9.0=9_mkl
+  - libcblas=3.9.0=9_mkl
   - libffi=3.3=he6710b0_2
   - libgcc-ng=9.3.0=h5101ec6_17
   - libgfortran-ng=7.5.0=h14aa051_19
@@ -42,6 +46,7 @@ dependencies:
   - libgomp=9.3.0=h5101ec6_17
   - libiconv=1.15=h63c8f33_5
   - libidn2=2.3.1=h27cfd23_0
+  - liblapack=3.9.0=9_mkl
   - libpng=1.6.37=hbc83047_0
   - libstdcxx-ng=9.3.0=hd4cf53a_17
   - libtasn1=4.16.0=h27cfd23_0
@@ -63,9 +68,10 @@ dependencies:
   - numpy-base=1.20.2=py38hfae3a4d_0
   - olefile=0.46=py_0
   - openh264=2.1.0=hd408876_0
-  - openssl=1.1.1k=h27cfd23_0
+  - openssl=1.1.1k=h7f98852_0
   - packaging=20.9=pyhd3eb1b0_0
   - pandas=1.2.5=py38h1abd341_0
+  - perl=5.26.2=h36c2ea0_1008
   - pillow=8.2.0=py38he98fc37_0
   - pip=21.1.3=py38h06a4308_0
   - psipred=4.01=1
@@ -77,25 +83,29 @@ dependencies:
   - python-dateutil=2.8.1=py_0
   - python-louvain=0.15=pyhd3deb0d_0
   - python_abi=3.8=2_cp38
-  - pytorch=1.8.1=py3.8_cuda10.2_cudnn7.6.5_0
-  - pytorch-cluster=1.5.9=py38_torch_1.8.0_cu102
-  - pytorch-geometric=1.7.2=py38_torch_1.8.0_cu102
-  - pytorch-scatter=2.0.7=py38_torch_1.8.0_cu102
-  - pytorch-sparse=0.6.10=py38_torch_1.8.0_cu102
-  - pytorch-spline-conv=1.2.1=py38_torch_1.8.0_cu102
+  - pytorch=1.8.1=py3.8_cuda10.1_cudnn7.6.3_0
+  - pytorch-cluster=1.5.9=py38_torch_1.8.0_cu101
+  - pytorch-scatter=2.0.8=py38_torch_1.8.0_cu101
+  - pytorch-sparse=0.6.12=py38_torch_1.8.0_cu101
+  - pytorch-spline-conv=1.2.1=py38_torch_1.8.0_cu101
+  - pytorch_geometric=2.0.1=pyh6c4a22f_0
+  - pytorch_sparse=0.6.4=py38h9235441_0
   - pytz=2021.1=pyhd8ed1ab_0
+  - rdflib=6.0.2=py38h578d9bd_0
   - readline=8.1=h27cfd23_0
   - requests=2.25.1=pyhd3deb0d_0
   - scikit-learn=0.24.2=py38ha9443f7_0
   - setuptools=52.0.0=py38h06a4308_0
   - six=1.16.0=pyhd3eb1b0_0
+  - sparqlwrapper=1.8.5=py38h578d9bd_1006
   - sqlite=3.36.0=hc218d9a_0
   - threadpoolctl=2.1.0=pyh5ca1d4c_0
   - tk=8.6.10=hbc83047_0
-  - torchvision=0.9.1=py38_cu102
+  - torchvision=0.9.1=py38_cu101
   - tqdm=4.61.1=pyhd8ed1ab_0
   - typing_extensions=3.10.0.0=pyh06a4308_0
   - urllib3=1.26.6=pyhd8ed1ab_0
+  - webencodings=0.5.1=py_1
   - wheel=0.36.2=pyhd3eb1b0_0
   - xz=5.2.5=h7b6447c_0
   - zlib=1.2.11=h7b6447c_3
